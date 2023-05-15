@@ -17,4 +17,4 @@ touch apps/.gitkeep
 mkdir -p projectGenerator
 touch projectGenerator/.gitkeep
 
-wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/templates/gitignore -O .gitignore
+wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/gitignore -O .gitignore
