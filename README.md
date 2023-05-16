@@ -1,5 +1,8 @@
 # ofCrossSetup
 
+![openFrameworks v0.11.2](https://img.shields.io/badge/openFrameworks-0.11.2-lightgrey?style=flat-square)
+![License badge](https://img.shields.io/github/license/nandenjin/ofcrosssetup?style=flat-square)
+
 Setup tool for [openFrameworks](https://openframeworks.cc/) projects with cross-platform development by Git and [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Project creation
