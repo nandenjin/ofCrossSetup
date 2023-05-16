@@ -11,10 +11,6 @@ fi
 
 echo "\nProject name = $PROJECT_NAME\n"
 
-# gitignore
-echo "⌛ Creating .gitignore\n"
-wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/gitignore -O .gitignore
-
 # Download and extract openFrameworks
 echo "⌛ Downloading openFrameworks\n"
 wget https://github.com/openframeworks/openFrameworks/archive/refs/tags/$OF_VERSION.tar.gz -O openFrameworks.tar.gz
@@ -29,6 +25,10 @@ rm -rf .appveyor.yml .github
 rm -rf docs examples tests other
 rm -rf INSTALL.md INSTALL_FROM_GITHUB.md CODE_OF_CONDUCT.md CHANGELOG.md THANKS.md SECURITY.md CONTRIBUTING.md
 rm -rf apps/*
+
+# gitignore
+echo "⌛ Creating .gitignore\n"
+wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/gitignore -O .gitignore
 
 # Create gitkeep
 echo "\n🗑️ Creating .gitkeep\n"

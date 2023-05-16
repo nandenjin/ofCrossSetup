@@ -12,24 +12,23 @@ if ([string]::IsNullOrWhiteSpace($PROJECT_NAME)) {
 
 Write-Host "`nProject name = $PROJECT_NAME`n"
 
-# gitignore
-Write-Host "⌛ Creating .gitignore`n"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/gitignore" -OutFile ".gitignore"
-
 # Download and extract openFrameworks
 Write-Host "⌛ Downloading openFrameworks`n"
-Invoke-WebRequest -Uri "https://github.com/openframeworks/openFrameworks/archive/refs/tags/$OF_VERSION.tar.gz" -OutFile "openFrameworks.tar.gz"
-Expand-Archive -Path "openFrameworks.tar.gz" -DestinationPath .\
-Remove-Item -Path "openFrameworks.tar.gz" -Force
-Move-Item -Path "openFrameworks-$OF_VERSION\*" -Destination .\
-Remove-Item -Path "openFrameworks-$OF_VERSION" -Force
+Invoke-WebRequest -Uri "https://github.com/openframeworks/openFrameworks/archive/refs/tags/$OF_VERSION.zip" -OutFile "openFrameworks.zip"
+Expand-Archive -Path "openFrameworks.zip" -DestinationPath .\
+Remove-Item -Path "openFrameworks.zip" -Force
+robocopy /move /E /nfl /ndl "openFrameworks-$OF_VERSION" .\ *
 
 # Remove unnecessary files
 Write-Host "`n🗑️ Removing unnecessary files`n"
-Remove-Item -Path ".appveyor.yml", ".github" -Recurse -Force
+Remove-Item -Path ".*" -Recurse -Force
 Remove-Item -Path "docs", "examples", "tests", "other" -Recurse -Force
-Remove-Item -Path "INSTALL.md", "INSTALL_FROM_GITHUB.md", "CODE_OF_CONDUCT.md", "CHANGELOG.md", "THANKS.md", "SECURITY.md", "CONTRIBUTING.md" -Force
+Remove-Item -Path "INSTALL_FROM_GITHUB.md", "CODE_OF_CONDUCT.md", "CHANGELOG.md", "THANKS.md", "CONTRIBUTING.md" -Force
 Remove-Item -Path "apps\*" -Recurse -Force
+
+# gitignore
+Write-Host "⌛ Creating .gitignore`n"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/gitignore" -OutFile ".gitignore"
 
 # Create gitkeep
 Write-Host "`n🗑️ Creating .gitkeep`n"
