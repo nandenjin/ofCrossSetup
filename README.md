@@ -20,6 +20,8 @@ then
 wget -O - https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/setup.sh | bash
 ```
 
+For Windows: Use bash on Windows, or download [`/setup.ps1`](/setup.ps1) and run it.
+
 ## Installation for each device
 
 - 🚀 Download pre-built projectGenerator from [`ci.openframeworks.cc/projectGenerator/`](http://ci.openframeworks.cc/projectGenerator/)
@@ -31,7 +33,7 @@ MacOS:
 ./scripts/cross_setup/install_osx.sh
 ```
 
-Visual Studio:
+Windows (Visual Studio):
 
 ```sh
 ./scripts/cross_setup/install_vs.sh
