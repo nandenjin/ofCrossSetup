@@ -32,6 +32,7 @@ mkdir -p projectGenerator
 touch projectGenerator/.gitkeep
 
 # Create setup script
+mkdir -p scripts/cross_setup
 for platform in ${PLATFORMS[@]}; do
     wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/scripts/install_$platform.sh -O scripts/cross_setup/install_$platform.sh
     chmod +x scripts/cross_setup/install_$platform.sh
