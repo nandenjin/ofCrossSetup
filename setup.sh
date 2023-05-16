@@ -39,10 +39,14 @@ touch projectGenerator/.gitkeep
 
 # Create install script
 echo "\n📦 Creating install scripts\n"
+INSTALL_SCRIPTS=(
+    install_osx.sh
+    install_vs.ps1
+)
 mkdir -p scripts/cross_setup
-for platform in ${PLATFORMS[@]}; do
-    wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/scripts/install_$platform.sh -O scripts/cross_setup/install_$platform.sh
-    chmod +x scripts/cross_setup/install_$platform.sh
+for script in ${INSTALL_SCRIPTS[@]}; do
+    wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/scripts/$script -O scripts/cross_setup/$script
+    chmod +x scripts/cross_setup/$script
 done
 
 # Create README
