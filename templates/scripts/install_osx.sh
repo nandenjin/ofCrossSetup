@@ -5,4 +5,4 @@ unzip -q projectGenerator.zip
 mv projectGenerator-osx/* projectGenerator/
 rm -rf projectGenerator-osx projectGenerator.zip
 
-$(dirname $(pwd))/../osx/install_osx.sh
+$(dirname "$0")/../osx/download_libs.sh
