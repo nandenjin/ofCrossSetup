@@ -10,4 +10,5 @@ Remove-Item -Path .\projectGenerator-vs -Recurse -Force
 Remove-Item -Path $outputPath -Force
 
 # Exec scripts/vs/download_libs.ps1
-& ..\vs\download_libs.ps1
+$scriptPath = Join-Path -Path $PSScriptRoot -ChildPath "..\vs\download_libs.ps1"
+& $scriptPath
