@@ -1,12 +1,10 @@
-Write-Host "Installing for osx..."
+Write-Host "Installing for Visual Studio..."
 
 $url = "http://ci.openframeworks.cc/projectGenerator/projectGenerator-vs.zip"
 $outputPath = "projectGenerator.zip"
 
 Invoke-WebRequest -Uri $url -OutFile $outputPath
-Expand-Archive -Path $outputPath -DestinationPath .\ -Force
-Move-Item -Path .\projectGenerator-vs\* -Destination .\projectGenerator\ -Force
-Remove-Item -Path .\projectGenerator-vs -Recurse -Force
+Expand-Archive -Path $outputPath -DestinationPath .\projectGenerator -Force
 Remove-Item -Path $outputPath -Force
 
 # Exec scripts/vs/download_libs.ps1
