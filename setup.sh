@@ -41,6 +41,7 @@ touch projectGenerator/.gitkeep
 echo "\n📦 Creating install scripts\n"
 INSTALL_SCRIPTS=(
     install_osx.sh
+    install_vs.sh
     install_vs.ps1
 )
 mkdir -p scripts/cross_setup
