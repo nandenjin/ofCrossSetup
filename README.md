@@ -23,7 +23,13 @@ then
 wget -O - https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/setup.sh | bash
 ```
 
-For Windows: Use bash on Windows, or download [`/setup.ps1`](/setup.ps1) and run it.
+For Windows:
+
+```ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/setup.ps1" -OutFile "setup.ps1"
+.\ setup.ps1
+Remove-Item setup.ps1
+```
 
 ## Installation for each device
 
@@ -42,4 +48,4 @@ Windows (Visual Studio):
 ./scripts/cross_setup/install_vs.sh
 ```
 
-For Visual Studio on Windows, [download projectGenerator](http://ci.openframeworks.cc/projectGenerator/projectGenerator-vs.zip) and place to under `/projectGenerator`.
+To use GUI version of ProjectGenerator, [download openFrameworks for Visual Studio](https://openframeworks.cc/download/), extract `projectGenerator` folder and place to under `/projectGenerator`, as mentioned in [document in official repo](https://github.com/openframeworks/openFrameworks/blob/master/INSTALL_FROM_GITHUB.md#get-the-project-generator).
