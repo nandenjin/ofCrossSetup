@@ -23,14 +23,6 @@ then
 wget -O - https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/setup.sh | bash
 ```
 
-For Windows:
-
-```ps1
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/setup.ps1" -OutFile "setup.ps1"
-.\ setup.ps1
-Remove-Item setup.ps1
-```
-
 ## Installation for each device
 
 - 🚀 Download pre-built projectGenerator from [`ci.openframeworks.cc/projectGenerator/`](http://ci.openframeworks.cc/projectGenerator/)
