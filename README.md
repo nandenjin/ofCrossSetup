@@ -39,5 +39,3 @@ Windows (Visual Studio):
 ```sh
 ./scripts/cross_setup/install_vs.sh
 ```
-
-To use GUI version of ProjectGenerator, [download openFrameworks for Visual Studio](https://openframeworks.cc/download/), extract `projectGenerator` folder and place to under `/projectGenerator`, as mentioned in [document in official repo](https://github.com/openframeworks/openFrameworks/blob/master/INSTALL_FROM_GITHUB.md#get-the-project-generator).

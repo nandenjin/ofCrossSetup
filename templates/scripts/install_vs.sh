@@ -1,8 +1,9 @@
 echo "Installing for vs..."
 
-wget http://ci.openframeworks.cc/projectGenerator/projectGenerator-vs.zip -O projectGenerator.zip
-unzip -q projectGenerator.zip
-mv projectGenerator-vs/* projectGenerator/
-rm -rf projectGenerator-vs projectGenerator.zip
+# Download pre-compiled openFrameworks and extract projectGenerator
+wget https://github.com/openframeworks/openFrameworks/releases/download/${OF_VERSION}/of_v${OF_VERSION}_vs2017_release.zip -O compiled-of.zip
+unzip compiled-of.zip of_v${OF_VERSION}_vs2017_release/projectGenerator/*
+mv of_v${OF_VERSION}_vs2017_release/projectGenerator/* projectGenerator/
+rm -rf compiled-of.zip of_v${OF_VERSION}_vs2017_release
 
 $(dirname "$0")/../vs/download_libs.sh

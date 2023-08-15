@@ -42,11 +42,12 @@ echo "\n📦 Creating install scripts\n"
 INSTALL_SCRIPTS=(
     install_osx.sh
     install_vs.sh
-    install_vs.ps1
 )
 mkdir -p scripts/cross_setup
 for script in ${INSTALL_SCRIPTS[@]}; do
     wget https://raw.githubusercontent.com/nandenjin/ofCrossSetup/dev/templates/scripts/$script -O scripts/cross_setup/$script
+    # Insert OF_VERSION at the top of the script
+    sed -i -e "1i OF_VERSION=$OF_VERSION" scripts/cross_setup/$script
     chmod +x scripts/cross_setup/$script
 done
 
