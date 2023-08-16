@@ -2,6 +2,18 @@
 projectGenerator/*
 !projectGenerator/.gitkeep
 
+# Ignore all files without an extension at /bin
+apps/*/*/bin/*
+!apps/*/*/bin/*/
+!apps/*/*/bin/*.*
+
+# Ignore build artifacts at /bin
+apps/*/*/bin/*.exe
+apps/*/*/bin/*.exp
+apps/*/*/bin/*.ilk
+apps/*/*/bin/*.lib
+apps/*/*/bin/*.pdb
+apps/*/*/bin/*.dll
 
 *.obj
 **/.vscode/browse.*
