@@ -1,5 +1,5 @@
 if [ -z "$OF_VERSION" ]; then
-    OF_VERSION=0.11.2
+    OF_VERSION=0.12.0
 fi
 
 echo "\n🙋‍♂️ Installing openFrameworks v$OF_VERSION\n"
